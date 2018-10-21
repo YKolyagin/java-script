@@ -1,18 +1,70 @@
 "use strict";
 
-let tickets = prompt("Введите ваш номер билета:");
-if (+tickets.length === 6) {
-    let sumRight = +tickets % 10 + Math.floor(+tickets/10) % 10 + Math.floor(+tickets/100) % 10;
-    let sumLeft = Math.floor(+tickets/1000) % 10 + Math.floor(+tickets/10000) % 10 + Math.floor(+tickets/100000) % 10;
-    if (sumLeft === sumRight) {
-        alert("У вас счастливый билет!")
-    }
-      else {
-          alert("Вам не повезло с билетом!")
+const arg1 = +prompt("Введите первое число.");
+const arg2 = +prompt("Введите второе число.");
+const operation = prompt("Введите действие с числами 'Сумма' 'Разность' 'Умножение' 'Деление'");
+
+/**
+ * @function [number] - Функция возвращает результат действия с двумя числами в зависиммости от ввода пользователя.
+ * @param (a) [number] - Первое число которое вводит пользователь.
+ * @param (b) [number] - Второе число которое вводит пользователь.
+ * @param (c) [strict] - Действие которое вводит пользователь. ('Сумма' 'Разность' 'Умножение' 'Деление')
+ * @returns [number] - результат математической операции с числами.
+ */
+
+// Я правильно пони
+
+function mathOperation(a, b, c) {
+    switch (c) {
+        case 'Сумма':
+            alert(`Сумма равна: ${a + b}`);
+            break;
+        case 'Разность':
+            alert(`Разность равна: ${a - b}`);
+            break;
+        case 'Умножение':
+            alert(`Умножение равно: ${a * b}`);
+            break;
+        case 'Деление':
+            alert(`Умножение равно: ${a / b}`);
+            break;
     }
 }
-  else {
-    alert("Какой-то не правильный у вас билет!");
+
+mathOperation(arg1, arg2, operation);
+
+
+// Второй вариант решения
+
+/*
+function sum(arg1, arg2) {
+    return arg1 + arg2
 }
 
+function diff(arg1, arg2) {
+    return arg1 - arg2
+}
 
+function division(arg1, arg2) {
+    return arg1 / arg2
+}
+
+function product(arg1, arg2) {
+    return arg1 * arg2
+}
+
+switch (operation) {
+    case 'Сумма':
+        alert(`Сумма равна: ${sum(arg1, arg2)}`);
+        break;
+    case 'Разность':
+        alert(`Разность равна: ${diff(arg1, arg2)}`);
+        break;
+    case 'Умножение':
+        alert(`Умножение равно: ${product(arg1, arg2)}`);
+        break;
+    case 'Деление':
+        alert(`Умножение равно: ${division(arg1, arg2)}`);
+        break;
+}
+*/

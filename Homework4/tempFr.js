@@ -1,7 +1,28 @@
 "use strict";
 
-// Defer - ждет пока загрузится вся страница полность а затем выполняет скрипт, то есть асинхронно.
+const a = +prompt("Введите первое число А.");
+const b = +prompt("Введите первое число B.");
 
-// Async - тоже запускается асинхронно, но он не ждет загрузки страницы.
+function sum(a, b) {
+    return a + b
+}
 
-// По умолчанию старница не загружается пока не загружен скрипт, поэтому скрипт ставят перед закрывающим тегом "body".
+alert(`Сумма ${sum(a, b)}`);
+
+function diff(a, b) {
+    return a - b
+}
+
+alert(`Разность ${diff(a, b)}`);
+
+function division(a, b) {
+    return a / b
+}
+
+alert(`Деление ${division(a, b)}`);
+
+function product(a, b) {
+    return a * b
+}
+
+alert(`Произведение ${product(a, b)}`);
