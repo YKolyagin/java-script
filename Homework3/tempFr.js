@@ -1,12 +1,5 @@
 "use strict";
 
-const a = +prompt("Введите первое произвольное целое число A.");
-const b = +prompt("Введите первое произвольное целое число B.");
+for (let i = 0, j = `x`; i < 20; console.log(j), i++, j += `xx`) {
 
-if (a >= 0 && b >= 0) {
-    let c = alert(`Разность чисел ${a} - ${b} = ${a - b}`);
-} else if (a <= 0 && b <= 0) {
-    let d = alert(`Произведение чисел ${a} * ${b} = ${a * b}`);
-} else {
-    let e = alert(`Сумма чисел ${a} + ${b} = ${a + b}`);
 }

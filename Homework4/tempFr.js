@@ -1,28 +1,11 @@
 "use strict";
 
-const a = +prompt("Введите первое число А.");
-const b = +prompt("Введите первое число B.");
-
-function sum(a, b) {
-    return a + b
+simpleNumber:
+for (let i = 2; i < 100; i++) {
+    for (let j = 2; j < i; j++ ) {
+        if (i % j === 0) {
+        continue simpleNumber;
+        }
+    }
+    console.log(i)
 }
-
-alert(`Сумма ${sum(a, b)}`);
-
-function diff(a, b) {
-    return a - b
-}
-
-alert(`Разность ${diff(a, b)}`);
-
-function division(a, b) {
-    return a / b
-}
-
-alert(`Деление ${division(a, b)}`);
-
-function product(a, b) {
-    return a * b
-}
-
-alert(`Произведение ${product(a, b)}`);
